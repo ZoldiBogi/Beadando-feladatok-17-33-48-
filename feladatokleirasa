@@ -8,6 +8,17 @@
 #  _ # #
 # _ # # #
 
+def lépcső(n,karakter):
+    fok=1
+    while n>=fok:0
+        print(""*n,karakter*fok)
+        fok=fok+1
+        n=n-1
+
+n=int(input("n= "))
+karakter=str(input("karakter= "))
+
+lépcső(n,karakter)
 
 
 
