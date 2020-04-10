@@ -8,10 +8,13 @@
 #  _ # #
 # _ # # #
 
+
+lépcső(n,karakter)
+
 def lépcső(n,karakter):
-    fok=1
-    while n>=fok:0
-        print(""*n,karakter*fok)
+    fok=0
+    while (n+2)>=fok:
+        print(" "*n,karakter*fok)
         fok=fok+1
         n=n-1
 
@@ -19,8 +22,6 @@ n=int(input("n= "))
 karakter=str(input("karakter= "))
 
 lépcső(n,karakter)
-
-
 
 # 33. Készítsen programot, amely egy bemeneti string-ről eldönti, hogy az helyes e-mail cím-e vagy
 # sem. A helyes cím alakja a következő: “azonosito@domain”.
