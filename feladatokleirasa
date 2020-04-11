@@ -33,7 +33,7 @@ lépcső(n,karakter)
 # - domain:
 # o a vége megfelel az engedélyezett formáknak amely egy bővíthető listában van
 # tárolva. A lista: [“.com”, “.hu”]
-# o az eleje nem kezdődhet nagy betűvel és nem tartalmazhat szóközöket és a
+# o az eleje nem kezdődhet nagy betűvel és nem tartalmazhat szóközöket és a 
 # következő karaktereket: “ ,?!*_:; ”
 
 # Példák: asd.asd@vlaami.hu -> valid
