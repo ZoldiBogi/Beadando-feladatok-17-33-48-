@@ -25,6 +25,15 @@ lépcső(n,karakter)
 
 #lehet hogy inkább forral kéne
 
+def lépcső(n,karakter):
+    for i in range(1, n + 1):
+       print(' ' * (n - i) + karakter* i)
+
+n=int(input("n= "))
+karakter=str(input("karakter= "))
+
+lépcső(n,karakter)
+
 # 33. Készítsen programot, amely egy bemeneti string-ről eldönti, hogy az helyes e-mail cím-e vagy
 # sem. A helyes cím alakja a következő: “azonosito@domain”.
 
