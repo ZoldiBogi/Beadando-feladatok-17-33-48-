@@ -23,6 +23,8 @@ karakter=str(input("karakter= "))
 
 lépcső(n,karakter)
 
+#lehet hogy inkább forral kéne
+
 # 33. Készítsen programot, amely egy bemeneti string-ről eldönti, hogy az helyes e-mail cím-e vagy
 # sem. A helyes cím alakja a következő: “azonosito@domain”.
 
