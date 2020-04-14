@@ -8,25 +8,9 @@
 #  _ # #
 # _ # # #
 
-
-lépcső(n,karakter)
-
 def lépcső(n,karakter):
-    fok=0
-    while (n+2)>=fok:
-        print(" "*n,karakter*fok)
-        fok=fok+1
-        n=n-1
-
-n=int(input("n= "))
-karakter=str(input("karakter= "))
-
-lépcső(n,karakter)
-
-#lehet hogy inkább forral kéne
-
-def lépcső(n,karakter):
-    for i in range(1, n + 1):
+    print(" "*n)
+    for i in range(1, n ):
        print(' ' * (n - i) + karakter* i)
 
 n=int(input("n= "))
@@ -54,13 +38,13 @@ lépcső(n,karakter)
 # asd(kukac)valami.hu -> nem valid# 
 
 
-# 44. Írjon programot, amely bekér egy n számot, majd pedig n alkalommal soronként számokat
-# szóközzel elválasztva. A program számolja a számsorban szereplő pozitív, illetve negatív
-# számok szórását külön-külön. A program írjon ki egy üzenetet a felhasználónak, ha nem
-# számolható valamelyik szórás.
-# Példa bemenet: n = 2
-# 2 15 -3 4 -9
-# 2 5 9
-# Példa kimenet:
-# Pozitív szórás: 7, negatív szórás: 3
-# Poziítv szórás: 2.86, negatív szórás nem számolható# 
+#48 Írjon programot, amely létrehoz egy random vektort, valamint bekér a felhasználótól egy
+kezdőindexet, egy végindexet és egy + vagy – jelet. A program + jel esetén rendezze a vektor
+elemeit a bekért indexek között növekvő sorrendben, - jel esetén csökkenő sorrendben. A
+program szúrjon be két | jelet a rendezett részsorozat elé, és mögé. A program kérje be a 
+felhasználótól a vektor méretét, valamint a random intervallum kezdő-, illetve végértékeit.
+Példa bemenet: 10 elemű vektor 1 – 20 közötti érétkekkel
+vektor = [2,15,3,16,8,7,11,3,19,2]
+3 8 +
+Példa kimenet:
+vektor = [2,15,3,|,3,7,8,11,16,19,|,2]
