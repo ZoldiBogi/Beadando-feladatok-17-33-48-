@@ -1,44 +1,33 @@
-# Beadandó /17,33,48/
+Beadandó /17,33,48/
 
-# 17. Készíts egy függvényt, aminek az egyik bemenete egy természetes szám (n) és egy karakter
-# (pl.: #) a másik. A függvény készítsen el egy n darab fokból álló lépcsőt úgy, hogy a megadott
-# karakter legyen a lépcső „váza”. pl: lépcső(4,’#’)
-#  _
-#  _ #
-#  _ # #
-# _ # # #
+17. Készíts egy függvényt, aminek az egyik bemenete egy természetes szám (n) és egy karakter
+ (pl.: #) a másik. A függvény készítsen el egy n darab fokból álló lépcsőt úgy, hogy a megadott
+ karakter legyen a lépcső „váza”. pl: lépcső(4,’#’)
+      _
+    _ #
+  _ # #
+_ # # #
 
-def lépcső(n,karakter):
-    print(" "*n)
-    for i in range(1, n ):
-       print(' ' * (n - i) + karakter* i)
+33. Készítsen programot, amely egy bemeneti string-ről eldönti, hogy az helyes e-mail cím-e vagy
+sem. A helyes cím alakja a következő: “azonosito@domain”.
 
-n=int(input("n= "))
-karakter=str(input("karakter= "))
+ - azonosito:
+ o nem tartalmazhat szóközöket és a következő karaktereket: “_,?!*:; ” (vigyázat,
+ pontot tartalmazhat)
 
-lépcső(n,karakter)
+ - domain:
+ o a vége megfelel az engedélyezett formáknak amely egy bővíthető listában van
+ tárolva. A lista: [“.com”, “.hu”]
+ o az eleje nem kezdődhet nagy betűvel és nem tartalmazhat szóközöket és a 
+ következő karaktereket: “ ,?!*_:; ”
 
-# 33. Készítsen programot, amely egy bemeneti string-ről eldönti, hogy az helyes e-mail cím-e vagy
-# sem. A helyes cím alakja a következő: “azonosito@domain”.
+ Példák: asd.asd@vlaami.hu -> valid
+ Asd?@valami.com -> nem valid
+ asdasd@valami.gb -> nem valid
+ asd@Valami.com -> nem valid
+ asd(kukac)valami.hu -> nem valid# 
 
-# - azonosito:
-# o nem tartalmazhat szóközöket és a következő karaktereket: “_,?!*:; ” (vigyázat,
-# pontot tartalmazhat)
-
-# - domain:
-# o a vége megfelel az engedélyezett formáknak amely egy bővíthető listában van
-# tárolva. A lista: [“.com”, “.hu”]
-# o az eleje nem kezdődhet nagy betűvel és nem tartalmazhat szóközöket és a 
-# következő karaktereket: “ ,?!*_:; ”
-
-# Példák: asd.asd@vlaami.hu -> valid
-# Asd?@valami.com -> nem valid
-# asdasd@valami.gb -> nem valid
-# asd@Valami.com -> nem valid
-# asd(kukac)valami.hu -> nem valid# 
-
-
-#48 Írjon programot, amely létrehoz egy random vektort, valamint bekér a felhasználótól egy
+48. Írjon programot, amely létrehoz egy random vektort, valamint bekér a felhasználótól egy
 kezdőindexet, egy végindexet és egy + vagy – jelet. A program + jel esetén rendezze a vektor
 elemeit a bekért indexek között növekvő sorrendben, - jel esetén csökkenő sorrendben. A
 program szúrjon be két | jelet a rendezett részsorozat elé, és mögé. A program kérje be a 
