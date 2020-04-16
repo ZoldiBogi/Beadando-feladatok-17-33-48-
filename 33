@@ -31,7 +31,8 @@ def email_cim(email):
         x+=1
     if domain.strip(" ,?!*_:; ")==domain:
         if domain.capitalize()!=domain:
-            if lista in domain:
+           domain1=any(lista in domain)
+            if domain1==True:  #még átkell előtte a domaint stringgé alakítani mert igy nem jó
                 x+=0
             else:
                 x+=1
