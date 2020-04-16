@@ -1,0 +1,19 @@
+# Beadandó /17,33,48/
+
+# 17. Készíts egy függvényt, aminek az egyik bemenete egy természetes szám (n) és egy karakter
+# (pl.: #) a másik. A függvény készítsen el egy n darab fokból álló lépcsőt úgy, hogy a megadott
+# karakter legyen a lépcső „váza”. pl: lépcső(4,’#’)
+#  _
+#  _ #
+#  _ # #
+# _ # # #
+
+def lépcső(n,karakter):
+    print(" "*n)
+    for i in range(1, n ):
+       print(' ' * (n - i) + karakter* i)
+
+n=int(input("n= "))
+karakter=str(input("karakter= "))
+
+lépcső(n,karakter)
