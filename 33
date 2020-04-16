@@ -47,3 +47,5 @@ def email_cim(email):
 
 email=str(input("email: "))
 email_cim(email)
+
+#még nem jó, munka alatt áll
