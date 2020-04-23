@@ -17,30 +17,30 @@
 # asd@Valami.com -> nem valid
 # asd(kukac)valami.hu -> nem valid# 
 
-#https://www.w3schools.com/python/python_ref_string.asp - split,strip,capitalize alkalmazása
+#https://www.w3schools.com/python/python_ref_string.asp - split,strip,capitalize,join alkalmazása
 
 def email_cim(email):
     e=email.split("@")
-    azonosito=e[0]
-    domain=e[1]
+    azonosito="".join(e[0])
+    domain="".join(e[1])
     x=0
     lista=[".com", ".hu"]
     if azonosito.strip("_,?!*:; ")==azonosito:
-        x+=0
-    else:
         x+=1
+    else:
+        x=0
     if domain.strip(" ,?!*_:; ")==domain:
         if domain.capitalize()!=domain:
-           domain1=any(lista in domain)
-            if domain1==True:  #még átkell előtte a domaint stringgé alakítani mert igy nem jó
-                x+=0
-            else:
-                x+=1
+            for elem in lista:
+                if elem in domain:
+                    x += 1
+                else:
+                    x+=0
         else:
-            x+=1
+            x=0
     else:
-        x+=1
-    if x==0:
+        x=0
+    if x>0:
         print("valid")
     else:
         print("nem valid")
@@ -49,4 +49,7 @@ def email_cim(email):
 email=str(input("email: "))
 email_cim(email)
 
-#még nem jó, munka alatt áll
+
+#(miután rájöttem hogy ha nem a listát akarom erőszakkal átalakítani 
+#hanem egyszerűen az elején átalakítom a domaint és az azonosítót stringgé 
+#a join segítségével akkor megkönnyítem az életem-) már csak az Except hiányzik
