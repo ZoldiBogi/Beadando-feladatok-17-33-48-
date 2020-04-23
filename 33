@@ -47,9 +47,10 @@ def email_cim(email):
 
 
 email=str(input("email: "))
-email_cim(email)
 
+try:
+    email_cim(email)
+except IndexError:
+    print("nem valid")
 
-#(miután rájöttem hogy ha nem a listát akarom erőszakkal átalakítani 
-#hanem egyszerűen az elején átalakítom a domaint és az azonosítót stringgé 
-#a join segítségével akkor megkönnyítem az életem-) már csak az Except hiányzik
+#kész
