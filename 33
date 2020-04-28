@@ -46,11 +46,11 @@ def email_cim(email):
         print("nem valid")
 
 
-email=str(input("email: "))
-
-try:
-    email_cim(email)
-except IndexError:
-    print("nem valid")
+while True:
+    try:
+        email=str(input("email: "))
+        email_cim(email)
+    except IndexError:
+        print("nem valid")
 
 #kész
