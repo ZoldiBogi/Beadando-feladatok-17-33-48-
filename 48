@@ -7,19 +7,44 @@
 #vektor = [2,15,3,16,8,7,11,3,19,2]
 #3 8 +
 #Példa kimenet:
-#vektor = [2,15,3,|,3,7,8,11,16,19,|,2]
+#vektor = [2,15,3,|,3,
 
 import numpy as np
-
-vektor=np.random.randint(1,20,10)
-print(vektor)
-kezdő_indx=int(input("kezdő: "))
-végső_index=int(input("végső: "))
+# meret=int(input("Adjon egy méretet"))
+# also=int(input("Adjon egy also indexet"))
+# felso=int(input("Adjon egy felso indexet"))
+# vektor=np.random.randint(also,felso,meret)
+# print(vektor)
+vektor=[10,11,9,6,5,12]
+# kezdo_indx=int(input("kezdő: "))
+# vegso_indx=int(input("végső: "))
+kezdo_indx=1
+vegso_indx=4
 jel=input("jel: ")
+rendezendo=[]
+for i in range(kezdo_indx,vegso_indx+1):
+    rendezendo.append(vektor[i])
+
 if jel=="+":
-    növekvő = np.sort(vektor)
-    print(növekvő)
+    rendezendo = np.sort(rendezendo)
+    print(rendezendo)
 if jel=="-":
-    növekvő = np.sort(vektor)
-    csökkenő = növekvő[::-1]   # Reverse the sorted array
-    print (csökkenő)
+    rendezendo =  np.sort(rendezendo)
+    rendezendo = rendezendo[::-1]   # Reverse the sorted array
+    print (rendezendo)
+kiirando=[]
+index=0
+vektorinx=0
+for i in range(len(vektor)+1):
+    if i==kezdo_indx or i==vegso_indx+1:
+        kiirando.append("|")
+    if i>=kezdo_indx and i<=vegso_indx:
+        kiirando.append(rendezendo[index])
+        index+=1
+        # vektorinx+=1
+    else:
+        kiirando.append(vektor[vektorinx])
+        vektorinx+=1
+print(kiirando)
+
+
