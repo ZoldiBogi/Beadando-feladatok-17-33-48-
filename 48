@@ -14,45 +14,48 @@
 
 import numpy as np
 
-meret=int(input("A vektor intervallumának mérete: "))
-also=int(input("Az intervallum kezdőértéke: "))
-felso=int(input("Az intervallum végértéke: "))
+while True:
+    try:
+        meret=int(input("A vektor intervallumának mérete: "))
+        also=int(input("Az intervallum kezdőértéke: "))
+        felso=int(input("Az intervallum végértéke: "))
 
-vektor=np.random.randint(also,felso,meret)
+        vektor=np.random.randint(also,felso,meret)
 
-kezdo_indx=int(input("kezdőindex: "))
-vegso_indx=int(input("végindex: "))
-jel=str(input("jel: "))
+        kezdo_indx=int(input("kezdőindex: "))
+        vegso_indx=int(input("végindex: "))
+        jel=str(input("jel: "))
 
-rendezendo=[]
+        rendezendo=[]
 
-for i in range(kezdo_indx,vegso_indx+1):
-    rendezendo.append(vektor[i])
+        for i in range(kezdo_indx,vegso_indx+1):
+            rendezendo.append(vektor[i])
 
-if jel=="+":
-    rendezendo = np.sort(rendezendo)
-    print(rendezendo)
+        if jel=="+":
+            rendezendo = np.sort(rendezendo)
+            print(rendezendo)
 
-if jel=="-":
-    rendezendo = np.sort(rendezendo)
-    rendezendo = rendezendo[::-1]   # megfordít
-    print (rendezendo)
+        if jel=="-":
+            rendezendo = np.sort(rendezendo)
+            rendezendo = rendezendo[::-1]   # megfordít
+            print (rendezendo)
 
-kiirando=[]
-index=0
-vektorindx=0
+        kiirando=[]
+        index=0
+        vektorindx=0
 
-for i in range(len(vektor)):
-    if i==kezdo_indx or i==vegso_indx+1:
-        kiirando.append("|")
-        if i>=kezdo_indx and i<=vegso_indx:
-            kiirando.append(rendezendo[index])
-            index+=1
-            vektorindx+=1
-        else:
-            kiirando.append(vektor[vektorindx])
-            vektorindx+=1
+        for i in range(len(vektor)):
+            if i==kezdo_indx or i==vegso_indx+1:
+                kiirando.append("|")
+                if i>=kezdo_indx and i<=vegso_indx:
+                    kiirando.append(rendezendo[index])
+                    index+=1
+                    vektorindx+=1
+                else:
+                    kiirando.append(vektor[vektorindx])
+                    vektorindx+=1
 
-print(f"vektor = {kiirando}")
+        print(f"vektor = {kiirando}")
 
-#még jön az exception handling
+    except IndexError and ValueError:
+        print("Helytelen érték, adja meg a paramétereket újra.")
