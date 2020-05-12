@@ -30,21 +30,21 @@ if jel=="+":
     print(rendezendo)
 if jel=="-":
     rendezendo =  np.sort(rendezendo)
-    rendezendo = rendezendo[::-1]   # Reverse the sorted array
+    rendezendo = rendezendo[::-1]   # reverse
     print (rendezendo)
 kiirando=[]
 index=0
 vektorinx=0
-for i in range(len(vektor)+1):
+for i in range(len(vektor)):
     if i==kezdo_indx or i==vegso_indx+1:
         kiirando.append("|")
     if i>=kezdo_indx and i<=vegso_indx:
         kiirando.append(rendezendo[index])
         index+=1
-        # vektorinx+=1
+        vektorinx+=1
     else:
         kiirando.append(vektor[vektorinx])
         vektorinx+=1
 print(kiirando)
 
-
+#megvan az alap így teszre, mostmár csak a rendes bekérések meg az exception handling kell
