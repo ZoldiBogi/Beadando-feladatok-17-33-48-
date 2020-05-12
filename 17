@@ -20,6 +20,3 @@ while True:
         lépcső(n,karakter)
     except ValueError:
         print("nem valid")
-        
-        
-        #kész
