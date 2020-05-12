@@ -52,5 +52,3 @@ while True:
         email_cim(email)
     except IndexError:
         print("nem valid")
-
-#kész
