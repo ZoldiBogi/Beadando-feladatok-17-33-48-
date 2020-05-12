@@ -18,5 +18,6 @@ while True:
         n = int(input("n= "))
         karakter = str(input("karakter= "))
         lépcső(n,karakter)
+        break
     except ValueError:
         print("nem valid")
