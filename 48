@@ -1,10 +1,25 @@
 #48 Írjon programot, amely létrehoz egy random vektort, valamint bekér a felhasználótól egy
-kezdőindexet, egy végindexet és egy + vagy – jelet. A program + jel esetén rendezze a vektor
-elemeit a bekért indexek között növekvő sorrendben, - jel esetén csökkenő sorrendben. A
-program szúrjon be két | jelet a rendezett részsorozat elé, és mögé. A program kérje be a 
-felhasználótól a vektor méretét, valamint a random intervallum kezdő-, illetve végértékeit.
-Példa bemenet: 10 elemű vektor 1 – 20 közötti érétkekkel
-vektor = [2,15,3,16,8,7,11,3,19,2]
-3 8 +
-Példa kimenet:
-vektor = [2,15,3,|,3,7,8,11,16,19,|,2]
+#kezdőindexet, egy végindexet és egy + vagy – jelet. A program + jel esetén rendezze a vektor
+#elemeit a bekért indexek között növekvő sorrendben, - jel esetén csökkenő sorrendben. A
+#program szúrjon be két | jelet a rendezett részsorozat elé, és mögé. A program kérje be a 
+#felhasználótól a vektor méretét, valamint a random intervallum kezdő-, illetve végértékeit.
+#Példa bemenet: 10 elemű vektor 1 – 20 közötti érétkekkel
+#vektor = [2,15,3,16,8,7,11,3,19,2]
+#3 8 +
+#Példa kimenet:
+#vektor = [2,15,3,|,3,7,8,11,16,19,|,2]
+
+import numpy as np
+
+vektor=np.random.randint(1,20,10)
+print(vektor)
+kezdő_indx=int(input("kezdő: "))
+végső_index=int(input("végső: "))
+jel=input("jel: ")
+if jel=="+":
+    növekvő = np.sort(vektor)
+    print(növekvő)
+if jel=="-":
+    növekvő = np.sort(vektor)
+    csökkenő = növekvő[::-1]   # Reverse the sorted array
+    print (csökkenő)
