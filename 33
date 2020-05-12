@@ -50,5 +50,6 @@ while True:
     try:
         email=str(input("email: "))
         email_cim(email)
+        break
     except IndexError:
         print("nem valid")
